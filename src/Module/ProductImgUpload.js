@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const ImageUploader = () => {
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState("");
 
   const handleFile = () => {
     console.log("hello world")

@@ -59,9 +59,9 @@ function ContainerOutsideExample() {
         <tbody>
           <tr>
             <td style={{paddingTop:"50px"}}>1</td>
-            <td style={{paddingTop:"50px"}}><input name="productName" value={productData.productName} onChange={givenData} type="text"></input></td>
-            <td style={{paddingTop:"50px"}}><input name="productDes" value={productData.productDes} onChange={givenData} type="text"></input></td>
-            <td style={{paddingTop:"50px"}}><input name="productPrice" value={productData.productPrice} onChange={givenData} type="text"></input></td>
+            <td style={{paddingTop:"50px"}}><input required name="productName" value={productData.productName} onChange={givenData} type="text"></input></td>
+            <td style={{paddingTop:"50px"}}><input required name="productDes" value={productData.productDes} onChange={givenData} type="text"></input></td>
+            <td style={{paddingTop:"50px"}}><input required name="productPrice" value={productData.productPrice} onChange={givenData} type="text"></input></td>
             <td><ProductImgUpload/></td>
             <td style={{paddingTop:"50px"}}><button className='btn btn-primary' onClick={submitProduct}>Add Product</button></td>
             <td style={{paddingTop:"50px"}}><button className='btn btn-danger'>Delete Product</button></td>

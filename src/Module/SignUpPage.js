@@ -7,6 +7,7 @@ import * as formik from 'formik';
 import * as yup from 'yup';
 import { useState } from 'react';
 import { Stack } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 function SignUpForm() {
   const schema = yup.object().shape({
@@ -21,6 +22,7 @@ function SignUpForm() {
         password:""
     });
 
+   const navigate = useNavigate()
   const handleSubmit =(values, {setSubmitting})=>{
     // event.preventDefault();
     console.log('SUBMITTING FORM:' ,values)
@@ -41,9 +43,14 @@ function SignUpForm() {
             }
         })
         .then((response)=>{
+          if(response == true){
             console.log("the Fectched data is",response);
             Setdata(response);
-            // navigate('/SignIn');
+            navigate('/SignIn');
+          }
+          else{
+            
+          }
         })
         .catch((e)=>{
             console.log("error",e);
@@ -114,6 +121,9 @@ function SignUpForm() {
               <Form.Control.Feedback type="invalid" >
               {errors.email}
               </Form.Control.Feedback>
+              {/* <Form.Control.Feedback type="invalid">
+              {errors.email && <div className="text-danger">{errors.email}</div>}
+              </Form.Control.Feedback> */}
             </Form.Group>
 
 
