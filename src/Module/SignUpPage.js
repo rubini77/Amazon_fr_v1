@@ -49,6 +49,7 @@ function SignUpForm() {
             navigate('/SignIn');
           }
           else{
+            alert("Email address already exists")
             
           }
         })
