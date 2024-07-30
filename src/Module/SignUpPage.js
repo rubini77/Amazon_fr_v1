@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 function SignUpForm() {
   const schema = yup.object().shape({
     name: yup.string().required(),
-    email: yup.string().required(),
+    email: yup.string().matches(/^[a-z]+\d*@gmail\.com$/, 'Invalid email format').required(),
     password: yup.string().required()
   }); 
 
@@ -49,7 +49,7 @@ function SignUpForm() {
             navigate('/SignIn');
           }
           else{
-            alert("Email address already exists")
+            alert("Email/username already exists")
             
           }
         })
@@ -111,7 +111,7 @@ function SignUpForm() {
             <Form.Group as={Col}  controlId="validationFormik04">
               <Form.Label className="fw-bold">Email Address</Form.Label>
               <Form.Control
-                type="text"
+                type="email"
                 placeholder="Email Address"
                 style={{minWidth:"320px"}}
                 name="email"

@@ -9,9 +9,12 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Col from 'react-bootstrap/Col';
 import Row  from 'react-bootstrap/Row';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Carousel from 'react-bootstrap/Carousel';
+import Card from 'react-bootstrap/Card';
 
 function NavScrollExample() {
   return (
+    <div>
     <Navbar  className="" style={{backgroundColor:"#131921"}} >
      
         <Row className="align-items-center">
@@ -90,6 +93,111 @@ function NavScrollExample() {
         </Row>
         
     </Navbar>
+
+
+    <div>
+    <Carousel data-bs-theme="dark">
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Toys/GW/GW-Hero-PC_BBAug23_Soft-toys_with-Apay_Lifestyle_2x._CB597740150_.jpg"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Beauty/Holi/Makeup-PC._CB578876927_.jpg"
+          alt="Second slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images-eu.ssl-images-amazon.com/images/G/31/saba/branddays/5300---Kitchen---Citi-bank-strip._CB580044345_.png"
+          alt="Third slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Consumables/GW/Unrec/Pets-PC_GW_Hero_3000x1200_01._CB578900116_.jpg"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/CE/March/Unrec/HF/Under_1499_Tallhero_3000x1200._CB581730972_.jpg"
+          alt="First slide"
+        />
+      </Carousel.Item><Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/GW/Uber/Nov/D103625178_DesktopTallHero_3000x1200._CB574597993_.jpg"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/shoes/2024/Sports_Shoes/GW/ATF/Unrec/Bandhan/rev/Frame_500._CB578862729_.jpg"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images-eu.ssl-images-amazon.com/images/G/31/OHL/24/BAU/feb/PC_hero_1_2x_1._CB582889946_.jpg"
+          alt="First slide"
+        />
+      </Carousel.Item>
+      
+      
+    </Carousel>
+    </div>
+
+    <div className="d-flex gap-4 p-5" style={{backgroundColor:"whitesmoke"}}>
+        <Card  style={{ width: '25rem' }}>
+            <Card.Body>
+              <Card.Title>Revamp your home in style</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: '25rem' }}>
+            <Card.Body>
+              <Card.Title>Appliances for your home | Up to 55% off</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: '25rem' }}>
+            <Card.Body>
+              <Card.Title>Up to 60% off | Styles for men</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: '25rem' }}>
+            <Card.Body>
+              <Card.Title>Up to 60% off | Styles for women</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+      </div>
+
+
+    </div>
   );
 }
 
